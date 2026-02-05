@@ -87,9 +87,9 @@ Other Options:
 	my $help;
 
 	GetOptions(
-		'gff=s'		=> \$gff,
+		'gff|i=s'	=> \$gff,
 		'bamdir|b=s'	=> \$bamdir,
-		'out=s'		=> \$out,
+		'out|o=s'	=> \$out,
 		'pheno=s'	=> \$pheno,
 
 		'chrl=s'	=> \$chrl,
@@ -193,7 +193,7 @@ sub generalBatch {
 	my $usage = "\n\tapav generalBatch --bed <BED_file> --bamdir <BAM_dir> --pheno <phenotype_file> --out <res_prefix> [options]
 
 Necessary input description:
-  -i, --gff             <file>          GFF file.
+  -i, --bed             <file>          BED file.
   -o, --out             <string>        Output file prefix.
   -b, --bamdir          <dir>           The directory contains mapping results (sorted '.bam' files).
   --pheno               <file>          Phenotype file.
@@ -250,9 +250,9 @@ Other Options:
         my $help;
 
         GetOptions(
-                'bed=s'         => \$bed,
+                'bed|i=s'         => \$bed,
                 'bamdir|b=s'    => \$bamdir,
-                'out=s'         => \$out,
+                'out|o=s'         => \$out,
                 'pheno=s'       => \$pheno,
 
 		'mincov=i'      => \$mincov,
